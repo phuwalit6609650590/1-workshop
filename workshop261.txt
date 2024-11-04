@@ -1,0 +1,4 @@
+
+1..docker network create mynetwork
+2.docker build -f DockerContainer_MS_SQL.dockerfile -t my-mssql-image . 
+3.docker run -d --name sql-server --network mynetwork -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourStrong@Passw0rd" -p 1433:1433 my-mssql-image
